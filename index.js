@@ -1,3 +1,3 @@
-import { init, bot } from './src/client/init.js';
+import { init, bot } from './src/main/init.js';
 
 init()
