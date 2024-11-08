@@ -1,0 +1,41 @@
+{
+    "starboard": {
+        
+        "enabled": true,
+        "channel": "",
+        "threshold": 3,
+        "emoji": "⭐️",
+
+        "ratio": {
+            "enabled": true,
+            "emoji": {
+                "upvote": "",
+                "downvote": ""
+            },
+            "threshold": {
+                "bump": "10",
+                "delete": "10"
+            }
+
+        },
+
+        "skullboard": {
+            "enabled": false,
+            "channel": "",
+            "threshold": 3
+        }
+    },
+    "welcome": {
+        "join": {
+            "channel": "",
+            "message": "",
+            "banner": ""
+        },
+        "leave": {
+            "channel": "",
+            "message": "",
+            "banner": "",
+            "ban_message": false
+        }
+    }
+}
