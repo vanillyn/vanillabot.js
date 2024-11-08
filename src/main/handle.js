@@ -13,6 +13,7 @@ export function handle(dir, type) {
     if (!dir) {
         return console.error("no path provided")
     } else if (type === "command") {
+        console.info(`loading commands in ${dir}`)
         for (const folder of cmdPath) {
             const commandFiles = fs.readdirSync(path.join(mainPath, folder)).filter(file => file.endsWith('.js'));
             for (const file of commandFiles) {
@@ -30,15 +31,13 @@ export function handle(dir, type) {
         }
     } else if (type === "event") {
         const eventFiles = fs.readdirSync(mainPath).filter(file => file.endsWith('.js'));
-
+        console.info(`loading events in ${dir}`)
         for (const file of eventFiles) {
             const filePath = path.join(mainPath, file);
             const event = require(filePath);
             if (event.once) {
-                console.info(`ran ${event}`)
                  vb.once(event.name, (...args) => event.execute(...args));
             } else {
-                console.info(`ran ${event}`)
                  vb.on(event.name, (...args) => event.execute(...args));
             }
         }

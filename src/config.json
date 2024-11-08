@@ -8,6 +8,7 @@
 
         "ratio": {
             "enabled": true,
+            "channel": "",
             "emoji": {
                 "upvote": "",
                 "downvote": ""
@@ -35,7 +36,7 @@
             "channel": "",
             "message": "",
             "banner": "",
-            "ban_message": false
+            "ban_message": true
         }
     }
 }
