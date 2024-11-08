@@ -1,3 +1,3 @@
-import { init, bot } from './src/init.js';
+import {init} from "./src/main/init.js";
 
-init()
+init(process.env.VB_TOKEN);
